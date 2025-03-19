@@ -199,7 +199,7 @@ layers:
 combos:
 - p: [4, 5]
   k: {t: '$$mdi:backspace$$', type: backspace}
-- p: [7, 8]
-  k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [3, 4]
   k: F3
+- p: [18, 17]
+  k: '&assetbrowser_clear'
