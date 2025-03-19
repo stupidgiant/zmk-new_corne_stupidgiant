@@ -57,14 +57,14 @@
             key-positions = <4 5>;
         };
 
-        Backspace_L {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
-        };
-
         Search {
             bindings = <&kp F3>;
             key-positions = <3 4>;
+        };
+
+        assetbrowserclear {
+            bindings = <&assetbrowser_clear>;
+            key-positions = <18 17>;
         };
     };
 
@@ -95,6 +95,13 @@
             #binding-cells = <0>;
             bindings = <&none &kp STAR &kp MINUS &kp N1>;
             label = "NEGATIVE";
+        };
+
+        assetbrowser_clear: assetbrowser_clear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F) &kp BACKSPACE>;
+            label = "ASSETBROWSER_CLEAR";
         };
     };
 
