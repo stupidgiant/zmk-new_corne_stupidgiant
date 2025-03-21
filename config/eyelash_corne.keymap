@@ -114,7 +114,7 @@
 &mt ESC TAB     &kp Q  &kp W  &kp E         &kp R  &td0                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                              &kp LEFT_ALT  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+                              &kp LEFT_ALT  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -147,10 +147,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1  &kp F2  &kp F3  &kp F11  &kp F12                                &mmv MOVE_UP                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH  &kp ASTERISK     &trans
-&trans          &kp F6  &kp F7  &kp F8  &kp F9   &kp F10                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &kp PRINTSCREEN  &trans
-&trans          &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &kp SCROLLLOCK   &trans
-                                &trans  &trans   &trans                                                                  &trans           &kp KP_NUMBER_0  &kp KP_NUMLOCK
+&studio_unlock  &kp F15  &kp F16  &kp F3  &kp F11  &kp F12                                &mmv MOVE_UP                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH  &kp ASTERISK     &trans
+&trans          &kp F6   &kp F7   &kp F8  &kp F9   &kp F10                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &kp PRINTSCREEN  &trans
+&trans          &kp F1   &kp F2   &kp F3  &kp F4   &kp F5   &kp C_MUTE                    &mmv MOVE_DOWN                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &kp SCROLLLOCK   &trans
+                                  &trans  &trans   &trans                                                                  &trans           &kp KP_NUMBER_0  &kp KP_NUMLOCK
             >;
 
             sensor-bindings = <&scroll_encoder>;
