@@ -102,7 +102,7 @@
         negative: negative {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp STAR &kp MINUS &kp N1>;
+            bindings = <&kp END &kp STAR &kp MINUS &kp N1>;
             label = "NEGATIVE";
         };
 
