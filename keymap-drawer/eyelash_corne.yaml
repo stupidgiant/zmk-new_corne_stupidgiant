@@ -48,7 +48,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:backspace-reverse-outline$$
   NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -149,8 +149,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - '&studio_unlock'
-  - F1
-  - F2
+  - F15
+  - F16
   - F3
   - F11
   - F12
