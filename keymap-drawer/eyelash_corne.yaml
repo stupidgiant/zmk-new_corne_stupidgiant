@@ -37,7 +37,7 @@ layers:
   - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - N
+  - '&Tapdance'
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
@@ -56,7 +56,7 @@ layers:
   - {t: '3', s: '#'}
   - '&ninty_minus'
   - '&Ninty'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - RANDOM PLAY
   - HOME
   - END
   - $$mdi:arrow-up-bold$$
