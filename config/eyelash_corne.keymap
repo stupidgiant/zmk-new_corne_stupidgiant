@@ -68,17 +68,17 @@
 
         Search {
             bindings = <&kp F3>;
-            key-positions = <3 4>;
+            key-positions = <17 18>;
         };
 
         assetbrowserclear {
             bindings = <&assetbrowser_clear>;
-            key-positions = <18 17>;
+            key-positions = <32 33>;
         };
 
         gaming {
             bindings = <&tog 4>;
-            key-positions = <2 3 4 5 7 8 9 10>;
+            key-positions = <4 5 7 8>;
         };
     };
 
@@ -107,7 +107,7 @@
         negative: negative {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp STAR &kp MINUS &kp N1>;
+            bindings = <&kp END &kp STAR &kp MINUS &kp N1 &kp ENTER>;
             label = "NEGATIVE";
         };
 
@@ -121,7 +121,11 @@
         spanish_n: spanish_n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_ALT &kp N1 &kp N6 &kp N4 &kt LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp N1 &kp N6 &kp N4>,
+                <&macro_release>;
+
             label = "SPANISH_N";
         };
     };
