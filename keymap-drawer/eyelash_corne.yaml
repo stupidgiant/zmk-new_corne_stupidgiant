@@ -248,9 +248,9 @@ layers:
 combos:
 - p: [4, 5]
   k: {t: '$$mdi:backspace$$', type: backspace}
-- p: [3, 4]
+- p: [17, 18]
   k: F3
-- p: [18, 17]
+- p: [32, 33]
   k: '&assetbrowser_clear'
-- p: [2, 3, 4, 5, 7, 8, 9, 10]
+- p: [4, 5, 7, 8]
   k: {t: '4', h: toggle}
