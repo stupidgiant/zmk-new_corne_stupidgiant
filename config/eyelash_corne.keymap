@@ -33,15 +33,6 @@
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp Y>;
         };
-
-        Tapdance: Tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp N>, <&spanish_n>;
-
-            label = "TAPDANCE";
-        };
     };
 
     rgb_encoder: rgb_encoder {
