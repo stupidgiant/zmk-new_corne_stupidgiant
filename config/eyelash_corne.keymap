@@ -117,17 +117,6 @@
             bindings = <&kp LC(F) &kp BACKSPACE>;
             label = "ASSETBROWSER_CLEAR";
         };
-
-        spanish_n: spanish_n {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp N1 &kp N6 &kp N4>,
-                <&macro_release>;
-
-            label = "SPANISH_N";
-        };
     };
 
     keymap {
@@ -138,7 +127,7 @@
             bindings = <
 &mt ESC TAB     &kp Q  &kp W  &kp E         &kp R  &td0                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B        &kp SPACE              &kp DOWN              &Tapdance    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                               &kp LEFT_ALT  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp DEL
             >;
 
@@ -181,12 +170,12 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_4 {
+        Gaming {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp UP               &kp Y    &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G                   &kp LEFT  &kp RET   &kp RIGHT  &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp SPACE              &kp DOWN             &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                         &kp LALT  &mo 1  &kp SPACE                                              &kp RET  &trans  &kp DEL
+&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp UP               &kp Y    &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT   &kp A  &kp S  &kp D     &kp F  &kp G                   &kp LEFT  &kp RET   &kp RIGHT  &kp H    &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B      &kp SPACE              &kp DOWN             &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                          &kp LALT  &mo 1  &kp SPACE                                              &kp RET  &trans  &kp DEL
             >;
         };
     };
