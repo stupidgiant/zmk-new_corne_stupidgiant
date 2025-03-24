@@ -469,7 +469,7 @@ rect.held, rect.combo.held {
 <g transform="translate(672, 153)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;Tapdance</tspan></text>
+<text x="0" y="-4" class="key tap">N</text>
 </g>
 <g transform="translate(728, 147)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -553,8 +553,8 @@ rect.held, rect.combo.held {
 <path d="M490,38 l163,3" class="combo"/>
 <path d="M490,38 l219,-3" class="combo"/>
 <rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="490" y="38" class="combo tap layer-activator">4</text>
+<a href="#Gaming">
+<text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 </g>
@@ -643,9 +643,8 @@ rect.held, rect.combo.held {
 <g transform="translate(84, 105)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#x_x">
-<text x="0" y="-4" class="key tap layer-activator">4</text>
-</a></g>
+<text x="0" y="-4" class="key tap">4</text>
+</g>
 <g transform="translate(140, 91)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
@@ -840,8 +839,8 @@ rect.held, rect.combo.held {
 <path d="M490,38 l163,3" class="combo"/>
 <path d="M490,38 l219,-3" class="combo"/>
 <rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="490" y="38" class="combo tap layer-activator">4</text>
+<a href="#Gaming">
+<text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 </g>
@@ -1124,8 +1123,8 @@ rect.held, rect.combo.held {
 <path d="M490,38 l163,3" class="combo"/>
 <path d="M490,38 l219,-3" class="combo"/>
 <rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="490" y="38" class="combo tap layer-activator">4</text>
+<a href="#Gaming">
+<text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 </g>
@@ -1413,19 +1412,19 @@ rect.held, rect.combo.held {
 <path d="M490,38 l163,3" class="combo"/>
 <path d="M490,38 l219,-3" class="combo"/>
 <rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="490" y="38" class="combo tap layer-activator">4</text>
+<a href="#Gaming">
+<text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
-<g transform="translate(40, 1274)" class="layer-4">
-<text x="0" y="28" class="label" id="x_x">4:</text>
+<g transform="translate(40, 1274)" class="layer-Gaming">
+<text x="0" y="28" class="label" id="Gaming">Gaming:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
+<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-esc"/>
 </g>
 <g transform="translate(84, 49)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1686,8 +1685,8 @@ rect.held, rect.combo.held {
 <path d="M490,38 l163,3" class="combo"/>
 <path d="M490,38 l219,-3" class="combo"/>
 <rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<a href="#x_x">
-<text x="490" y="38" class="combo tap layer-activator">4</text>
+<a href="#Gaming">
+<text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 </g>

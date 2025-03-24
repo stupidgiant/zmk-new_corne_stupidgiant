@@ -37,7 +37,7 @@ layers:
   - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - '&Tapdance'
+  - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
@@ -196,8 +196,8 @@ layers:
   - {type: held alternate}
   - KP 0
   - .
-  '4':
-  - $$mdi:keyboard-tab$$
+  Gaming:
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -253,4 +253,4 @@ combos:
 - p: [32, 33]
   k: '&assetbrowser_clear'
 - p: [4, 5, 7, 8]
-  k: {t: '4', h: toggle}
+  k: {t: Gaming, h: toggle}
