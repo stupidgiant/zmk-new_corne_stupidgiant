@@ -6,7 +6,7 @@ layers:
   - W
   - E
   - R
-  - '&td0'
+  - '&T_Y'
   - $$mdi:arrow-up-bold$$
   - Y
   - U
@@ -154,7 +154,7 @@ layers:
   - F17
   - F11
   - F12
-  - {t: 'Gui+$$mdi:arrow-up-bold$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:arrow-up-bold$$
   - KP 7
   - KP 8
   - KP 9
@@ -167,9 +167,9 @@ layers:
   - F8
   - F9
   - F10
-  - Gui+$$mdi:arrow-left-bold$$
-  - $$mdi:mouse-left-click-outline$$
-  - Gui+$$mdi:arrow-right-bold$$
+  - $$mdi:arrow-left-bold$$
+  - {t: LEFT WIN, h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:arrow-right-bold$$
   - KP 4
   - KP 5
   - KP 6
@@ -183,7 +183,7 @@ layers:
   - F4
   - F5
   - $$mdi:volume-off$$
-  - Gui+$$mdi:arrow-down-bold$$
+  - $$mdi:arrow-down-bold$$
   - KP 1
   - KP 2
   - KP 3
