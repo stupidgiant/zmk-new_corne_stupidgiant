@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-esc$$'}
+  - '&tab_esc'
   - Q
   - W
   - E
@@ -246,11 +246,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
 combos:
-- p: [4, 5]
+- p: [4, 5, 44]
   k: {t: '$$mdi:backspace$$', type: backspace}
-- p: [17, 18]
+- p: [17, 18, 44]
   k: F3
-- p: [32, 33]
+- p: [32, 33, 44]
   k: '&assetbrowser_clear'
 - p: [4, 5, 7, 8]
   k: {t: Gaming, h: toggle}
