@@ -154,7 +154,7 @@ layers:
   - F17
   - F11
   - F12
-  - '&winup'
+  - {t: 'Gui+$$mdi:arrow-up-bold$$', h: '$$mdi:gesture-tap-hold$$'}
   - KP 7
   - KP 8
   - KP 9
@@ -167,7 +167,7 @@ layers:
   - F8
   - F9
   - F10
-  - '&winleft'
+  - Gui+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - Gui+$$mdi:arrow-right-bold$$
   - KP 4
