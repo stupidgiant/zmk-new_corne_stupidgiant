@@ -72,7 +72,7 @@ layers:
   - PREVIOUS
   - PLAY PAUSE
   - $$mdi:skip-next$$
-  - $$mdi:arrow-left-bold$$
+  - LEFT WIN
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -85,7 +85,7 @@ layers:
   - '&negative'
   - '&Mirror'
   - $$mdi:volume-off$$
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - MUTE
   - PLAY PAUSE
   - PREVIOUS
   - NEXT
