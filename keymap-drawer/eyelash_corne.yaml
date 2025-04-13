@@ -154,7 +154,7 @@ layers:
   - F17
   - F11
   - F12
-  - Gui+$$mdi:arrow-up-bold$$
+  - '&winup'
   - KP 7
   - KP 8
   - KP 9
@@ -167,7 +167,7 @@ layers:
   - F8
   - F9
   - F10
-  - Gui+$$mdi:arrow-left-bold$$
+  - '&winleft'
   - $$mdi:mouse-left-click-outline$$
   - Gui+$$mdi:arrow-right-bold$$
   - KP 4
