@@ -154,7 +154,7 @@ layers:
   - F17
   - F11
   - F12
-  - $$mdi:arrow-up-bold$$
+  - Gui+$$mdi:arrow-up-bold$$
   - KP 7
   - KP 8
   - KP 9
@@ -167,7 +167,7 @@ layers:
   - F8
   - F9
   - F10
-  - $$mdi:arrow-left-bold$$
+  - '&winup'
   - {t: LEFT WIN, h: '$$mdi:gesture-tap-hold$$'}
   - $$mdi:arrow-right-bold$$
   - KP 4
