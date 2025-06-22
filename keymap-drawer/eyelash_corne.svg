@@ -563,6 +563,14 @@ rect.held, rect.combo.held {
 <text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-4">
+<path d="M303,175 l-34,-19" class="combo"/>
+<path d="M303,175 l33,36" class="combo"/>
+<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
+<text x="303" y="175" class="combo tap">
+<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-NUMBER">
@@ -859,6 +867,14 @@ rect.held, rect.combo.held {
 <text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-4">
+<path d="M303,175 l-34,-19" class="combo"/>
+<path d="M303,175 l33,36" class="combo"/>
+<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
+<text x="303" y="175" class="combo tap">
+<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 637)" class="layer-SYMBOL">
@@ -1149,6 +1165,14 @@ rect.held, rect.combo.held {
 <a href="#Gaming">
 <text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-4">
+<path d="M303,175 l-34,-19" class="combo"/>
+<path d="M303,175 l33,36" class="combo"/>
+<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
+<text x="303" y="175" class="combo tap">
+<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+</text>
 </g>
 </g>
 </g>
@@ -1449,6 +1473,14 @@ rect.held, rect.combo.held {
 <text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-4">
+<path d="M303,175 l-34,-19" class="combo"/>
+<path d="M303,175 l33,36" class="combo"/>
+<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
+<text x="303" y="175" class="combo tap">
+<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1274)" class="layer-Gaming">
@@ -1728,6 +1760,14 @@ rect.held, rect.combo.held {
 <a href="#Gaming">
 <text x="490" y="38" class="combo tap layer-activator">Gaming</text>
 </a><text x="490" y="49" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-4">
+<path d="M303,175 l-34,-19" class="combo"/>
+<path d="M303,175 l33,36" class="combo"/>
+<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
+<text x="303" y="175" class="combo tap">
+<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+</text>
 </g>
 </g>
 </g>
