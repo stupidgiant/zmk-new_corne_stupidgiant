@@ -458,7 +458,9 @@ rect.held, rect.combo.held {
 <g transform="translate(378, 153)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-space"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">LEFT</tspan><tspan x="0" dy="1.2em">WIN</tspan>
+</text>
 </g>
 <g transform="translate(546, 153)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -506,8 +508,11 @@ rect.held, rect.combo.held {
 <g transform="translate(285, 209) rotate(12.0)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em">LEFT</tspan><tspan x="0" dy="1.2em">WIN</tspan>
+</text>
 <a href="#NUMBER">
-<text x="0" y="-4" class="key tap layer-activator">NUMBER</text>
+<text x="0" y="24" class="key hold layer-activator">NUMBER</text>
 </a></g>
 <g transform="translate(348, 226) rotate(24.0)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -564,11 +569,11 @@ rect.held, rect.combo.held {
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
-<path d="M303,175 l-34,-19" class="combo"/>
-<path d="M303,175 l33,36" class="combo"/>
-<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
-<text x="303" y="175" class="combo tap">
-<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+<path d="M300,186 l-34,-28" class="combo"/>
+<path d="M300,186 l34,28" class="combo"/>
+<rect rx="6" ry="6" x="286" y="173" width="28" height="26" class="combo"/>
+<text x="300" y="186" class="combo tap">
+<tspan x="300" dy="-0.6em">LEFT</tspan><tspan x="300" dy="1.2em">WIN</tspan>
 </text>
 </g>
 </g>
@@ -868,11 +873,11 @@ rect.held, rect.combo.held {
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
-<path d="M303,175 l-34,-19" class="combo"/>
-<path d="M303,175 l33,36" class="combo"/>
-<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
-<text x="303" y="175" class="combo tap">
-<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+<path d="M300,186 l-34,-28" class="combo"/>
+<path d="M300,186 l34,28" class="combo"/>
+<rect rx="6" ry="6" x="286" y="173" width="28" height="26" class="combo"/>
+<text x="300" y="186" class="combo tap">
+<tspan x="300" dy="-0.6em">LEFT</tspan><tspan x="300" dy="1.2em">WIN</tspan>
 </text>
 </g>
 </g>
@@ -1167,11 +1172,11 @@ rect.held, rect.combo.held {
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
-<path d="M303,175 l-34,-19" class="combo"/>
-<path d="M303,175 l33,36" class="combo"/>
-<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
-<text x="303" y="175" class="combo tap">
-<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+<path d="M300,186 l-34,-28" class="combo"/>
+<path d="M300,186 l34,28" class="combo"/>
+<rect rx="6" ry="6" x="286" y="173" width="28" height="26" class="combo"/>
+<text x="300" y="186" class="combo tap">
+<tspan x="300" dy="-0.6em">LEFT</tspan><tspan x="300" dy="1.2em">WIN</tspan>
 </text>
 </g>
 </g>
@@ -1474,11 +1479,11 @@ rect.held, rect.combo.held {
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
-<path d="M303,175 l-34,-19" class="combo"/>
-<path d="M303,175 l33,36" class="combo"/>
-<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
-<text x="303" y="175" class="combo tap">
-<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+<path d="M300,186 l-34,-28" class="combo"/>
+<path d="M300,186 l34,28" class="combo"/>
+<rect rx="6" ry="6" x="286" y="173" width="28" height="26" class="combo"/>
+<text x="300" y="186" class="combo tap">
+<tspan x="300" dy="-0.6em">LEFT</tspan><tspan x="300" dy="1.2em">WIN</tspan>
 </text>
 </g>
 </g>
@@ -1762,11 +1767,11 @@ rect.held, rect.combo.held {
 </a><text x="490" y="49" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-4">
-<path d="M303,175 l-34,-19" class="combo"/>
-<path d="M303,175 l33,36" class="combo"/>
-<rect rx="6" ry="6" x="289" y="162" width="28" height="26" class="combo"/>
-<text x="303" y="175" class="combo tap">
-<tspan x="303" dy="-0.6em">LEFT</tspan><tspan x="303" dy="1.2em">WIN</tspan>
+<path d="M300,186 l-34,-28" class="combo"/>
+<path d="M300,186 l34,28" class="combo"/>
+<rect rx="6" ry="6" x="286" y="173" width="28" height="26" class="combo"/>
+<text x="300" y="186" class="combo tap">
+<tspan x="300" dy="-0.6em">LEFT</tspan><tspan x="300" dy="1.2em">WIN</tspan>
 </text>
 </g>
 </g>

@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - LEFT WIN
   - $$mdi:arrow-down-bold$$
   - N
   - M
@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-option$$
-  - NUMBER
+  - {t: LEFT WIN, h: NUMBER}
   - {t: '$$mdi:keyboard-space$$', h: FN/NUMPAD}
   - {t: '$$mdi:keyboard-return$$', h: FN/NUMPAD}
   - SYMBOL
@@ -254,5 +254,5 @@ combos:
   k: '&assetbrowser_clear'
 - p: [4, 5, 7, 8]
   k: {t: Gaming, h: toggle}
-- p: [32, 33, 44]
+- p: [32, 44]
   k: LEFT WIN
