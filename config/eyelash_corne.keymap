@@ -99,6 +99,11 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <29 30>;
         };
+
+        taskmanager {
+            bindings = <&kp LC(LA(DELETE))>;
+            key-positions = <28 42 12>;
+        };
     };
 
     macros {
