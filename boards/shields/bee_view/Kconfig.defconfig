@@ -1,0 +1,57 @@
+# SPDX-License-Identifier: MIT
+#
+# bee_view: a custom status screen for the nice!view (control-room readouts on
+# the left half, an animated bee on the right half).
+
+if SHIELD_BEE_VIEW
+
+config LV_Z_VDB_SIZE
+    default 100
+
+config LV_DPI_DEF
+    default 161
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config LV_Z_MEM_POOL_SIZE
+    default 4096 if ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    imply BEE_VIEW_WIDGET
+
+config BEE_VIEW_WIDGET
+    bool "bee_view status screen"
+    select LV_USE_CANVAS
+
+config BEE_VIEW_INVERTED
+    bool "Dark pixels on a light background instead of light on dark"
+
+config BEE_VIEW_LOW_BATTERY
+    int "Battery percentage at or below which the low power alert shows"
+    default 15
+
+if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+
+config BEE_VIEW_WIDGET
+    select ZMK_WPM
+
+# Lets the left half show the right half's battery.
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
+endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+
+endif # SHIELD_BEE_VIEW

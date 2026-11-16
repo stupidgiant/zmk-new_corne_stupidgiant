@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MIT
+
+config ZMK_LAYER_LIGHTS
+    bool "Light the keys that do something on the active layer"
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_LAYER_LIGHTS_ENABLED
+    depends on ZMK_RGB_UNDERGLOW
+
+if ZMK_LAYER_LIGHTS
+
+config ZMK_LAYER_LIGHTS_BRIGHTNESS
+    int "Layer light brightness, in percent"
+    range 1 100
+    default 35
+
+endif # ZMK_LAYER_LIGHTS

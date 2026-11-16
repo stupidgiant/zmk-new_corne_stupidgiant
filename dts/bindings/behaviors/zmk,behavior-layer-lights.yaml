@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: MIT
+
+description: |
+  Lights the per-key LEDs under the keys that do something on the active layer.
+  The left half works out which keys those are and tells the right half through
+  this behavior. Binding it to a key with LYL_CALIBRATE starts LED calibration.
+
+compatible: "zmk,behavior-layer-lights"
+
+include: two_param.yaml
+
+properties:
+  layers:
+    type: array
+    required: true
+    description: Layer numbers that get lights, counted from 0 in keymap order.
+  colors:
+    type: array
+    required: true
+    description: One 0xRRGGBB color per entry in layers.
+  calibration-layer:
+    type: int
+    description: |
+      Layer to hold active during LED calibration, so that the key presses do
+      nothing. Give it a layer whose keys are all &none.

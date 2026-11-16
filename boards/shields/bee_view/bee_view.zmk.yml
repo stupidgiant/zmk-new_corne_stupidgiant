@@ -1,0 +1,7 @@
+file_format: "1"
+id: bee_view
+name: bee_view (custom nice!view screen)
+type: shield
+requires: [nice_view_spi]
+features:
+  - display
