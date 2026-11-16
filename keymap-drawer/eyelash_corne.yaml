@@ -148,7 +148,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   FN/NUMPAD:
-  - '&lyl 0 0xF0000000'
+  - {t: '&studio_unlock', h: '&lyl_cal'}
   - F15
   - F16
   - F17
@@ -356,5 +356,5 @@ combos:
   k: LEFT WIN
 - p: [29, 30]
   k: Alt+$$mdi:keyboard-tab$$
-- p: [28, 42, 12]
+- p: [0, 1, 12]
   k: Ctl+Alt+$$mdi:backspace-reverse-outline$$
