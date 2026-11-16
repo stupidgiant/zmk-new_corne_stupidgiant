@@ -307,3 +307,5 @@ combos:
   k: LEFT WIN
 - p: [29, 30]
   k: Alt+$$mdi:keyboard-tab$$
+- p: [28, 42, 12]
+  k: Ctl+Alt+$$mdi:backspace-reverse-outline$$
