@@ -15,9 +15,12 @@
  *    Until then every LED lights, so the layer color still shows.
  *  - Calibration runs on the left half first and then on the right. LEDs light
  *    white one at a time and the next key pressed on that half is taken as the
- *    key above it; an LED nobody answers within 15 seconds is skipped. The
- *    left half holds the keymap on an all-&none layer meanwhile, so the key
- *    presses type nothing.
+ *    key above it. If nothing is pressed for 10 seconds, that half's turn ends
+ *    and keeps what it learned. The left half holds the keymap on an
+ *    all-&none layer meanwhile, so the key presses type nothing. If the left
+ *    half's turn ends without a single key press, calibration was most likely
+ *    started by accident, so the right half's turn is skipped too and the old
+ *    LED map is kept.
  *  - The LED strip is shared with ZMK's RGB underglow. While layer lights are
  *    showing, underglow is switched off, and it is put back afterwards.
  */
@@ -57,7 +60,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #define POWER_SETTLE_MS 60
 #define DONE_FLASH_MS 700
-#define SKIP_LED_MS 15000
+#define TURN_IDLE_MS 10000
 
 static const struct device *const strip = DEVICE_DT_GET(STRIP_NODE);
 static const struct device *const ext_power = DEVICE_DT_GET(DT_INST(0, zmk_ext_power_generic));
@@ -81,11 +84,12 @@ static bool ext_power_was_on;
 
 static void apply(struct k_work *work);
 static K_WORK_DELAYABLE_DEFINE(apply_work, apply);
-static void skip_led(struct k_work *work);
-static K_WORK_DELAYABLE_DEFINE(skip_work, skip_led);
+static void turn_idle(struct k_work *work);
+static K_WORK_DELAYABLE_DEFINE(idle_work, turn_idle);
 
-/* Left half only: called when this half's calibration turn ends. */
-static void calibration_turn_over(void);
+/* Left half only: called when this half's calibration turn ends, with
+ * whether any key was pressed during it. */
+static void calibration_turn_over(bool learned);
 
 static bool is_calibrated(void) {
     for (int i = 0; i < NUM_LEDS; i++) {
@@ -193,21 +197,24 @@ static void calibration_start(void) {
     memset(led_position, UNMAPPED, sizeof(led_position));
     cal_index = 0;
     calibrating = true;
-    k_work_reschedule(&skip_work, K_MSEC(SKIP_LED_MS));
+    k_work_reschedule(&idle_work, K_MSEC(TURN_IDLE_MS));
 }
 
 static void calibration_finish(void) {
-    calibrating = false;
-    k_work_cancel_delayable(&skip_work);
+    bool learned = is_calibrated();
 
-    if (is_calibrated()) {
+    calibrating = false;
+    k_work_cancel_delayable(&idle_work);
+
+    if (learned) {
         save_pending = true;
         done_flash = true;
     } else {
         /* Nobody pressed anything, so keep the map from before. */
         memcpy(led_position, led_position_backup, sizeof(led_position));
     }
-    calibration_turn_over();
+    k_work_reschedule(&apply_work, K_NO_WAIT);
+    calibration_turn_over(learned);
 }
 
 static void calibration_record(uint8_t position) {
@@ -215,14 +222,16 @@ static void calibration_record(uint8_t position) {
     if (++cal_index >= NUM_LEDS) {
         calibration_finish();
     } else {
-        k_work_reschedule(&skip_work, K_MSEC(SKIP_LED_MS));
+        k_work_reschedule(&idle_work, K_MSEC(TURN_IDLE_MS));
     }
     k_work_reschedule(&apply_work, K_NO_WAIT);
 }
 
-static void skip_led(struct k_work *work) {
+/* No key pressed for a while: end this half's turn. LEDs not reached yet
+ * stay unmapped. */
+static void turn_idle(struct k_work *work) {
     if (calibrating) {
-        calibration_record(UNMAPPED);
+        calibration_finish();
     }
 }
 
@@ -257,7 +266,7 @@ ZMK_SUBSCRIPTION(layer_lights_position, zmk_position_state_changed);
 
 #include <zmk/keymap.h>
 
-#define SESSION_IDLE_MS 40000
+#define SESSION_IDLE_MS (TURN_IDLE_MS + 2000)
 
 static bool session;
 static bool right_turn;
@@ -310,8 +319,8 @@ static void calibration_session_begin(void) {
     calibration_start();
 }
 
-static void calibration_turn_over(void) {
-    if (IS_ENABLED(CONFIG_ZMK_SPLIT)) {
+static void calibration_turn_over(bool learned) {
+    if (IS_ENABLED(CONFIG_ZMK_SPLIT) && learned) {
         k_work_submit(&right_turn_work);
     } else {
         k_work_reschedule(&session_end_work, K_NO_WAIT);
@@ -334,7 +343,7 @@ static void remote_key_pressed(void) {
 #else /* right half */
 
 static void calibration_session_begin(void) {} /* waits for CMD_CALIBRATE_RIGHT */
-static void calibration_turn_over(void) {}
+static void calibration_turn_over(bool learned) {}
 static void remote_key_pressed(void) {}
 
 #endif

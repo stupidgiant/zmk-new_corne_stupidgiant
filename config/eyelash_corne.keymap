@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-// Binding for the key that starts (or ends) layer-light calibration.
+// Binding that starts layer-light calibration.
 #define LYL_CALIBRATE 0 0xF0000000
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
@@ -39,6 +39,45 @@
             layers = <1 2 3 5>;                            // NUMBER SYMBOL FN WM
             colors = <0xff7a33 0x5b47d6 0x8bd450 0xff2bd6>; // orange purple green pink
             calibration-layer = <6>;
+        };
+
+        // Top-left key on the FN layer: tap for Studio unlock, hold it for a
+        // full 1.5 seconds to start layer-light calibration.
+        cal_hold: cal_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1500>;
+            bindings = <&lyl_cal>, <&studio_unlock>;
+        };
+
+        // Left thumb layer keys (Win/NUMBER and Space/FN). "balanced" means: if
+        // you press and release another key while the thumb is down, it counts
+        // as holding the layer, however quick you are. The stock &lt waited a
+        // full 200 ms, so fast shortcuts came out as a Win or Space tap.
+        // require-prior-idle-ms keeps fast typing safe: right after another
+        // key, the thumb always taps. quick-tap-ms lets you tap then hold to
+        // repeat a space.
+        lt_thumb: lt_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Win/NUMBER thumb: counts as holding the layer the moment any other
+        // key goes down, however fast and in whatever order you let go, so
+        // muscle-memory shortcuts like -90 never send a stray Win. Tapped on
+        // its own it is still Win.
+        lt_win: lt_win {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
 
         T_Y: td0 {
@@ -114,13 +153,23 @@
             key-positions = <29 30>;
         };
 
+        // Ctrl+Alt+Delete: Ctrl and Alt are no longer part of this combo, because
+        // keys in a combo get held back for a moment, which made Ctrl and Alt
+        // shortcuts finicky. Press Tab, Q and Backspace together instead, or
+        // hold Ctrl and Alt and press the Del thumb key on the right.
         taskmanager {
             bindings = <&kp LC(LA(DELETE))>;
-            key-positions = <28 42 12>;
+            key-positions = <0 1 12>;
         };
     };
 
     macros {
+        lyl_cal: lyl_cal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&lyl LYL_CALIBRATE>;
+        };
+
         Ninty: Ninty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -192,7 +241,7 @@
 &tab_esc        &kp Q  &kp W  &kp E         &kp R        &kp T                                  &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F        &kp G                        &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C         &kp V        &kp B        &kp LEFT_WIN              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                              &kp LEFT_ALT  &lt 1 LMETA  &lt 3 SPACE                                                  &lt 3 ENTER  &mo 2  &kp DEL
+                              &kp LEFT_ALT  &lt_win 1 LMETA  &lt_thumb 3 SPACE                                                  &lt 3 ENTER  &mo 2  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -225,7 +274,7 @@
         layer_3 {
             display-name = "FN/NUMPAD";
             bindings = <
-&lyl LYL_CALIBRATE  &kp F15  &kp F16  &kp F17  &kp F11  &kp F12                                    &kp LG(UP_ARROW)                               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH  &kp ASTERISK    &trans
+&cal_hold 0 0      &kp F15  &kp F16  &kp F17  &kp F11  &kp F12                                    &kp LG(UP_ARROW)                               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH  &kp ASTERISK    &trans
 &trans          &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                &kp LG(LEFT_ARROW)  &lazy_stickykey LEFT_WIN  &kp LG(RIGHT_ARROW)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS  &kp KP_NUMLOCK  &trans
 &trans          &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp C_MUTE                        &kp LG(DOWN_ARROW)                             &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS   &kp SCROLLLOCK  &trans
                                   &trans   &trans   &trans                                                                                    &trans           &kp KP_NUMBER_0  &kp PERIOD
