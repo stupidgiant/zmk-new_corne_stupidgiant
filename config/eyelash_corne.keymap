@@ -80,6 +80,21 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // N: tap for n, hold for ñ. An English layout has no key for ñ, so
+        // holding N sends F19 and AutoHotkey (CombinedScript.ahk) types the ñ
+        // (Ñ with Shift). "tap-preferred": it only counts as held once you keep
+        // it down past tapping-term, so fast typing (dinner, running) never
+        // misfires. quick-tap-ms: tap then hold N to repeat n as usual.
+        n_tilde: n_tilde {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            display-name = "N / hold for ñ";
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         T_Y: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -240,7 +255,7 @@
             bindings = <
 &tab_esc        &kp Q  &kp W  &kp E         &kp R        &kp T                                  &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F        &kp G                        &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V        &kp B        &kp LEFT_WIN              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V        &kp B        &kp LEFT_WIN              &kp DOWN              &n_tilde F19 N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                               &kp LEFT_ALT  &lt_win 1 LMETA  &lt_thumb 3 SPACE                                                  &lt 3 ENTER  &mo 2  &kp DEL
             >;
 
