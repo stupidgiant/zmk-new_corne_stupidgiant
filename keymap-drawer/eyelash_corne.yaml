@@ -37,7 +37,7 @@ layers:
   - B
   - LEFT WIN
   - $$mdi:arrow-down-bold$$
-  - N
+  - {t: N, h: F19}
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
